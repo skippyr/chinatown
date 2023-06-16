@@ -11,8 +11,7 @@ function _chinatown::venv {
 }
 
 function _chinatown::branch_changes {
-	typeset -r changes=$(git status --porcelain 2>/dev/null)
-	[[ -n ${changes} ]] && echo "✗"
+	[[ -n $(git status --porcelain 2>/dev/null) ]] && echo "✗"
 }
 
 function _chinatown::branch {
