@@ -9,16 +9,15 @@ In the preview, the theme was used in the [Kitty terminal emulator](https://gith
 
 It shows:
 
-* a flame if the last command failed.
-* user and hostname.
-* sourced virtual environment.
-* current directory abbreviated like the Fish shell does.
-* git branch.
-* a decorator if there are changes in git branch.
+* if your last command has failed.
+* your user and hostname.
+* virtual environment that you have sourced.
+* your current directory abbreviated.
+* if inside a repository, the branch and if it has changes to commit.
 
 ## Installation
 
-* install `git` and a font patched by the [Nerd Fonts project](https://github.com/ryanoasis/nerd-fonts).
+* install `git` and a font patched by the [Nerd Fonts project](https://github.com/ryanoasis/nerd-fonts). You also need an emojis font, like the [Noto Sans Emojis](https://fonts.google.com/noto/specimen/Noto+Emoji), however you probably already have one installed.
 * clone this repository.
 
 ```bash

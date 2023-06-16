@@ -3,11 +3,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT="1"
 
 function _chinatown::venv {
 	typeset -r venv=${VIRTUAL_ENV##*/}
-	if [[ -n ${venv} ]]; then
-		echo "%K{green}   %B${venv}%b %F{green}%K{red}%F{black}"
-	else
-		echo "%K{red}"
-	fi
+	[[ -n ${venv} ]] &&
+	echo "%K{green}   %B${venv}%b %F{green}%K{red}%F{black}" ||
+	echo "%K{red}"
 }
 
 function _chinatown::pwd {
@@ -21,21 +19,22 @@ function _chinatown::pwd {
 	echo ${(j./.)pwd}
 }
 
-function _chinatown::branch_changes {
-	[[ -n $(git status --porcelain 2>/dev/null) ]] && echo "✗"
+function _chinatown::changes {
+	[[ -n $(git status --porcelain 2>/dev/null) ]] &&
+	echo "✗"
 }
 
 function _chinatown::branch {
 	typeset -r branch=$(git branch --show-current 2>/dev/null)
-	if [[ -n ${branch} ]]; then
-		echo "%K{yellow}%F{black}  󰘬 %B${branch}%b$(_chinatown::branch_changes) %F{yellow}%k"
-	else
-		echo ""
-	fi
+	[[ -n ${branch} ]] &&
+	echo "%K{yellow}%F{black}  󰘬 %B${branch}%b$(_chinatown::changes) %F{yellow}%k" ||
+	echo ""
 }
 
-precmd() { precmd() {
+precmd() {
+	precmd() {
 		echo
-} }
+	}
+}
 
 PROMPT='%K{black} %(?..🔥)🐉 %n@%B%m%b %F{black}$(_chinatown::venv)   %B$(_chinatown::pwd)%b %k%F{red}$(_chinatown::branch)%f  '
