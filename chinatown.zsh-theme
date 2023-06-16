@@ -13,11 +13,11 @@ function _chinatown::venv {
 function _chinatown::pwd {
 	pwd=("${(s./.)PWD/${HOME}/~}")
 	if [[ ${#pwd} > 1 ]]; then
-		for split_iterator in {1..$((${#pwd} - 1))}; do
-			if [[ "${pwd[split_iterator]}" == .* ]]; then
-				pwd[split_iterator]=${pwd[split_iterator][1,2]}
+		for splits_iterator in {1..$((${#pwd} - 1))}; do
+			if [[ "${pwd[splits_iterator]}" == .* ]]; then
+				pwd[splits_iterator]=${pwd[splits_iterator][1,2]}
 			else
-				pwd[split_iterator]=${pwd[split_iterator][1]}
+				pwd[splits_iterator]=${pwd[splits_iterator][1]}
 			fi
 		done
 	fi
