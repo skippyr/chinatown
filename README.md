@@ -17,5 +17,6 @@ If you want to contribute to this project, check out its [contributions guidelin
 ## License
 
 This project is released under the terms of the MIT license.
+
 Copyright (c) 2023, Sherman Rofeman. MIT License.
 
