@@ -23,4 +23,4 @@ function _chinatown::branch {
 	fi
 }
 
-PROMPT=' %(?..🔥)🐉 %n@%B%m%b %F{black}$(_chinatown::venv)   %B%1~%b %k%F{red}$(_chinatown::branch)%f  '
+PROMPT='%K{black} %(?..🔥)🐉 %n@%B%m%b %F{black}$(_chinatown::venv)   %B%1~%b %k%F{red}$(_chinatown::branch)%f  '
