@@ -1,7 +1,7 @@
 setopt promptsubst
 export VIRTUAL_ENV_DISABLE_PROMPT="1"
 
-function _venv {
+function _chinatown::venv {
 	typeset -r venv=${VIRTUAL_ENV##*/}
 	if [[ -n ${venv} ]]; then
 		echo "%K{green}   %B${venv}%b %F{green}%K{red}%F{black}"
@@ -10,18 +10,18 @@ function _venv {
 	fi
 }
 
-function _branch_changes {
+function _chinatown::branch_changes {
 	typeset -r changes=$(git status --porcelain 2>/dev/null)
 	[[ -n ${changes} ]] && echo "✗"
 }
 
-function _branch {
+function _chinatown::branch {
 	typeset -r branch=$(git branch --show-current 2>/dev/null)
 	if [[ -n ${branch} ]]; then
-		echo "%K{yellow}%F{black}  󰘬 %B${branch}%b$(_branch_changes) %F{yellow}%k"
+		echo "%K{yellow}%F{black}  󰘬 %B${branch}%b$(_chinatown::branch_changes) %F{yellow}%k"
 	else
 		echo ""
 	fi
 }
 
-PROMPT=' %(?..🔥)🐉 %n %F{black}$(_venv)   %B%1~%b %k%F{red}$(_branch)%f  '
+PROMPT=' %(?..🔥)🐉 %n@%B%m%b %F{black}$(_chinatown::venv)   %B%1~%b %k%F{red}$(_chinatown::branch)%f  '
