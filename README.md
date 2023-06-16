@@ -12,7 +12,7 @@ It shows:
 * a flame if the last command failed.
 * user and hostname.
 * sourced virtual environment.
-* current directory.
+* current directory abbreviated like the Fish shell does.
 * git branch.
 * a decorator if there are changes in git branch.
 

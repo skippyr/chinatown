@@ -10,6 +10,20 @@ function _chinatown::venv {
 	fi
 }
 
+function _chinatown::pwd {
+	pwd=("${(s./.)PWD/${HOME}/~}")
+	if [[ ${#pwd} > 1 ]]; then
+		for split_iterator in {1..$((${#pwd} - 1))}; do
+			if [[ "${pwd[split_iterator]}" == .* ]]; then
+				pwd[split_iterator]=${pwd[split_iterator][1,2]}
+			else
+				pwd[split_iterator]=${pwd[split_iterator][1]}
+			fi
+		done
+	fi
+	echo ${(j./.)pwd}
+}
+
 function _chinatown::branch_changes {
 	[[ -n $(git status --porcelain 2>/dev/null) ]] && echo "✗"
 }
@@ -23,4 +37,8 @@ function _chinatown::branch {
 	fi
 }
 
-PROMPT='%K{black} %(?..🔥)🐉 %n@%B%m%b %F{black}$(_chinatown::venv)   %B%1~%b %k%F{red}$(_chinatown::branch)%f  '
+precmd() { precmd() {
+		echo
+} }
+
+PROMPT='%K{black} %(?..🔥)🐉 %n@%B%m%b %F{black}$(_chinatown::venv)   %B$(_chinatown::pwd)%b %k%F{red}$(_chinatown::branch)%f  '
