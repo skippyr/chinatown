@@ -31,8 +31,8 @@ function _chinatown::branch {
 	echo ""
 }
 
-precmd() {
-	precmd() {
+function precmd {
+	function precmd {
 		echo
 	}
 }
