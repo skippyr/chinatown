@@ -2,13 +2,13 @@
 
 ## Starting Point
 
-The Chinatown project is a ZSH-theme with a dragon and flames. It is inspired by the [Agnoster theme](https://github.com/agnoster/agnoster-zsh-theme).
+The Chinatown project is a dual-line ZSH-theme with a dragon and flames. It is inspired by the [Agnoster theme](https://github.com/agnoster/agnoster-zsh-theme).
 
 Right below, there is a preview that you check out.
 
 ![](./images/preview.png)
 
-In the preview, the Chinatown theme was used in the Kitty terminal with the [Flamerial theme](https://github.com/skippyr/flamerial). Font used was Fira Code Medium Nerd Font.
+In the preview, the Chinatown theme was used in the Kitty terminal with the [Flamerial theme](https://github.com/skippyr/flamerial). Font used was Fira Code (Medium) Nerd Font.
 
 The colors used in the theme may vary in your setup, as it depends on the terminal emulator's theme you are using.
 
@@ -20,7 +20,7 @@ It can show you:
 * Your user and hostname.
 * The name of sourced virtual environments.
 * Your current directory path abbreviated.
-* The name of the current branch and if has changes to commit, if you are inside a Git repository.
+* If inside a Git repository, the name of the branch, if has changes to commit and the latest tag.
 
 ## Installation
 
