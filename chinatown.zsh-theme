@@ -25,7 +25,7 @@ function _chinatown::changes {
 }
 
 function _chinatown::tag {
-	typeset -r tag=$(git describe --tags 2>/dev/null)
+	typeset -r tag=$(git describe --tags --abbrev=0 2>/dev/null)
 	[[ -n ${tag} ]] &&
 	echo "%F{yellow}%K{magenta}%F{black}   ${tag} %F{magenta}%k" ||
 	echo "%F{yellow}%k"
