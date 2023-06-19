@@ -8,7 +8,7 @@ Right below, there is a preview that you check out.
 
 ![](./images/preview.png)
 
-In the preview, the Chinatown theme was used in the Kitty terminal with the [Flamerial theme](https://github.com/skippyr/flamerial). Font used was Fira Code Nerd Font.
+In the preview, the Chinatown theme was used in the Kitty terminal with the [Flamerial theme](https://github.com/skippyr/flamerial). Font used was Fira Code Medium Nerd Font.
 
 The colors used in the theme may vary in your setup, as it depends on the terminal emulator's theme you are using.
 

@@ -4,7 +4,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT="1"
 function _chinatown::venv {
 	typeset -r venv=${VIRTUAL_ENV##*/}
 	[[ -n ${venv} ]] &&
-	echo "%K{green}   %B${venv}%b %F{green}%K{red}%F{black}" ||
+	echo "%K{green}   ${venv} %F{green}%K{red}%F{black}" ||
 	echo "%K{red}"
 }
 
@@ -27,7 +27,7 @@ function _chinatown::changes {
 function _chinatown::branch {
 	typeset -r branch=$(git branch --show-current 2>/dev/null)
 	[[ -n ${branch} ]] &&
-	echo "%K{yellow}%F{black}  󰘬 %B${branch}%b$(_chinatown::changes) %F{yellow}%k" ||
+	echo "%K{yellow}%F{black}  󰘬 ${branch}$(_chinatown::changes) %F{yellow}%k" ||
 	echo ""
 }
 
@@ -37,4 +37,4 @@ function precmd {
 	}
 }
 
-PROMPT='%K{black} %(?..🔥)🐉 %n@%B%m%b %F{black}$(_chinatown::venv)   %B$(_chinatown::pwd)%b %k%F{red}$(_chinatown::branch)%f  '
+PROMPT='%K{black} %(?..🔥)🐉 %n@%m %F{black}$(_chinatown::venv)   $(_chinatown::pwd) %k%F{red}$(_chinatown::branch)%f  '
