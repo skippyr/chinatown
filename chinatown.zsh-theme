@@ -44,5 +44,5 @@ function precmd {
 	}
 }
 
-PROMPT='%K{black}%F{red} %f %n@%m %F{black}%K{8} %F{8}$(_chinatown::venv)  $(_chinatown::pwd) %k%F{red}$(_chinatown::branch) 
- %(?..🔥)🐉 %F{yellow}⇢ %f '
+PROMPT='%K{black}%F{red} %f %(?..🔥)🐉 %n@%m %F{black}%K{8} %F{8}$(_chinatown::venv)  $(_chinatown::pwd) %k%F{red}$(_chinatown::branch) 
+%F{8} ✗%f '
