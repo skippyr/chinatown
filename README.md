@@ -59,7 +59,7 @@ You can install this theme in multiple ways, use the one that suits you best.
 
 ### Within OhMyZSH
 
-* Install the theme in OhMyZSH custom themes's directory.
+* Install the theme in OhMyZSH custom themes' directory.
 
     ```bash
     git clone --depth=1 https://github.com/skippyr/chinatown ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/chinatown
@@ -82,7 +82,7 @@ Learn how to report issues and contribute to this project by reading its
 ## License
 
 This project is released under the terms of the MIT license. A copy of the
-license is bundled within the source code.
+license is bundled with the source code.
 
 Copyright (c) 2023, Sherman Rofeman. MIT license.
 
