@@ -74,3 +74,15 @@ You can install this theme in multiple ways, use the one that suits you best.
 
 * Reopen your terminal emulator.
 
+## Issues And Contributions
+
+Learn how to report issues and contribute to this project by reading its
+[contributions guidelines](https://skippyr.github.io/materials/pages/contributions_guidelines.html).
+
+## License
+
+This project is released under the terms of the MIT license. A copy of the
+license is bundled within the source code.
+
+Copyright (c) 2023, Sherman Rofeman. MIT license.
+
