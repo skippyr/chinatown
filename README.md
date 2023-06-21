@@ -25,7 +25,8 @@ This theme can show you the following information:
 * Your user and hostname.
 * The name of sourced virtual environments.
 * Your current directory path abbreviated.
-* If inside a Git repository, the name of the branch, if has changes to commit and the latest tag.
+* If inside a Git repository, the name of the branch, if has changes to be
+  committed and the latest tag.
 
 
 ## Dependencies
@@ -37,7 +38,7 @@ This theme has some dependencies that you need to download before installing it.
     This is the terminal utility used to obtain information about your Git
     repositories.
 
-* A font patched by the Nerd Fonts project and an emojis font, like Noto Emoji.
+* A font patched by the Nerd Fonts project and an emojis font, like [Noto Emoji](https://fonts.google.com/noto/specimen/Noto+Emoji).
 
     These fonts provides all pretty symbols used in this theme.
 
