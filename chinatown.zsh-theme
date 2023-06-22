@@ -10,8 +10,8 @@ export VIRTUAL_ENV_DISABLE_PROMPT="1"
 # To avoid conflicts with possible user defined functions, all functions defined
 # in this theme use the "chinatown::" prefix.
 #
-# They might also use an underline (_) at their start to make them harder to
-# find when using a regular tab completition.
+# They might also use an underline character (_) at their start to make them
+# harder to find when using a regular tab completition.
 
 # If using a virtual environment, prints its base name.
 function _chinatown::print_venv {
