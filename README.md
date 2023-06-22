@@ -12,7 +12,7 @@ reference to see what it can look like:
 
 ![](./images/preview.png)
 
-> In this preview, the Chinatown was used within the [Kitty terminal emulator](https://github.com/kovidgoyal/kitty)
+> In this preview, the Chinatown theme was used within the [Kitty terminal emulator](https://github.com/kovidgoyal/kitty)
 with the [Twilight theme](https://github.com/kovidgoyal/kitty-themes/blob/master/themes/Twilight.conf).
 Font used is [IntelOne Mono (Medium)](https://github.com/intel/intel-one-mono)
 with fallback to Nerd Fonts Symbols. Wallpaper is [Landscape photography of waterfalls by Yeo Yonghwan](https://unsplash.com/photos/sS7P1h4Modg) from Unsplash.
