@@ -1,13 +1,19 @@
-# Enables prompt substitution.
+# Enables ZSH prompt substitution.
 #
-# This makes ZSH substitute variables and functions inside of the PROMPT
-# variables. For it to work, they must be defined using single quotes.
+# This make it substitute variables and functions in the prompt variables, but
+# they need to be defined using single quotes for it to work.
 setopt promptsubst
-# Disables the default changes made to the prompt when sourcing a virtual
+# Prevents the default changes made to the prompt when sourcing a virtual
 # environment.
 export VIRTUAL_ENV_DISABLE_PROMPT="1"
 
-# Prints the name of sourced virtual environments.
+# To avoid conflicts with possible user defined functions, all functions defined
+# in this theme use the "chinatown::" prefix.
+#
+# They might also use an underline (_) at their start to make them harder to
+# find when using a regular tab completition.
+
+# If using a virtual environment, prints its base name.
 function _chinatown::print_venv {
   typeset -r venv=${VIRTUAL_ENV##*/}
   [[ -n ${venv} ]] &&
@@ -15,26 +21,27 @@ function _chinatown::print_venv {
   echo "%K{red} %F{black}"
 }
 
-# Prints the current directory path abbreviating the name of parent directories.
-function _chinatown::print_pwd {
-  typeset pwd=("${(s./.)PWD/${HOME}/~}")
+# Prints the current directory path (PWD) with the name of parent directories
+# abbreviated. A tilde character (~) substitutes the ${HOME} directory.
+function _chinatown::print_pwd_abbreviated {
+  typeset -a pwd=("${(s./.)PWD/${HOME}/~}")
   [[ ${#pwd} > 1 ]] &&
   for splits_iterator in {1..$((${#pwd} - 1))}; do
     [[ "${pwd[splits_iterator]}" == .* ]] &&
-    pwd[splits_iterator]=${pwd[splits_iterator][1,2]} ||
-    pwd[splits_iterator]=${pwd[splits_iterator][1]}
+    pwd[splits_iterator]="${pwd[splits_iterator][1,2]}" ||
+    pwd[splits_iterator]="${pwd[splits_iterator][1]}"
   done
-  echo ${(j./.)pwd}
+  echo "${(j./.)pwd}"
 }
 
-# If inside a Git repository, it prints a decorator whenever there are changes
-# to be commited.
+# If inside a Git repository, prints a decorator if there are changes to be
+# commited.
 function _chinatown::print_git_changes {
   [[ -n $(git status --porcelain 2>/dev/null) ]] &&
   echo "✗"
 }
 
-# If inside a Git repository, it prints the latest tag.
+# If inside a Git repository, prints the latest tag if it is available.
 function _chinatown::print_git_tag {
   typeset -r tag=$(git describe --tags --abbrev=0 2>/dev/null)
   [[ -n ${tag} ]] &&
@@ -42,8 +49,8 @@ function _chinatown::print_git_tag {
   echo "%F{yellow}%k"
 }
 
-# If inside a Git repository, it prints name of the branch, if there are changes
-# to be commited and the latest tag.
+# If inside a Git repository, prints the name of the branch, if there are
+# changes to be commited and the latest tag.
 function _chinatown::print_git_info {
   typeset -r branch=$(git branch --show-current 2>/dev/null)
   [[ -n ${branch} ]] &&
@@ -51,16 +58,16 @@ function _chinatown::print_git_info {
   echo ""
 }
 
-# The precmd function is a ZSH builtin function that gets executed every time
+# The "precmd" function is a ZSH builtin function that gets executed every time
 # before the prompt gets printed.
 #
-# This one is a workaround to make it print a new line character before the
-# prompt and make it more comfortable to use.
+# This setup is a work-around to make it print a new line after each command to
+# make the theme be more comfortable to use.
 function precmd {
   function precmd {
     echo
   }
 }
 
-PROMPT='%K{black}%F{red} %f %(?..🔥)🐉 %n@%m %F{black}%K{8} %F{8}$(_chinatown::print_venv)  $(_chinatown::print_pwd) %k%F{red}$(_chinatown::print_git_info) 
+PROMPT='%K{black}%F{red} %f %(?..🔥)🐉 %n@%m %F{black}%K{8} %F{8}$(_chinatown::print_venv)  $(_chinatown::print_pwd_abbreviated) %k%F{red}$(_chinatown::print_git_info) %f
 %F{8} ✗%f '
