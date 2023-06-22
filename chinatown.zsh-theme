@@ -42,8 +42,9 @@ function _chinatown::print_git_tag {
   echo "%F{yellow}%k"
 }
 
-# If inside a Git repository, it prints name of the branch.
-function _chinatown::print_git_branch {
+# If inside a Git repository, it prints name of the branch, if there are changes
+# to be commited and the latest tag.
+function _chinatown::print_git_info {
   typeset -r branch=$(git branch --show-current 2>/dev/null)
   [[ -n ${branch} ]] &&
   echo "%K{yellow} %F{black} 󰘬 ${branch}$(_chinatown::print_git_changes) $(_chinatown::print_git_tag)" ||
@@ -61,5 +62,5 @@ function precmd {
   }
 }
 
-PROMPT='%K{black}%F{red} %f %(?..🔥)🐉 %n@%m %F{black}%K{8} %F{8}$(_chinatown::print_venv)  $(_chinatown::print_pwd) %k%F{red}$(_chinatown::print_git_branch) 
+PROMPT='%K{black}%F{red} %f %(?..🔥)🐉 %n@%m %F{black}%K{8} %F{8}$(_chinatown::print_venv)  $(_chinatown::print_pwd) %k%F{red}$(_chinatown::print_git_info) 
 %F{8} ✗%f '
