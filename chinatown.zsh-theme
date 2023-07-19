@@ -5,9 +5,9 @@ __Chinatown()
 {
 	Get_Virtual_Environment()
 	{
-		[[ -n ${VIRTUAL_ENV} ]] && echo "%K{2}%F{8} %F{0}  ${VIRTUAL_ENV##*/}"\
-		                                "%K{1}%F{2} %F{0}" ||
-		                           echo "%K{1}%F{8} %F{0}"
+		[[ ${VIRTUAL_ENV} ]] && echo "%K{2}%F{8} %F{0}  ${VIRTUAL_ENV##*/}"\
+		                             "%K{1}%F{2} %F{0}" ||
+		                        echo "%K{1}%F{8} %F{0}"
 	}
 
 	Get_Directory()
@@ -22,15 +22,15 @@ __Chinatown()
 	Get_Tag()
 	{
 		typeset -r t=$(git describe --tags --abbrev=0 2>/dev/null)
-		[[ -n $t ]] && echo "%K{5}%F{3} %F{0}  $t %k%F{5} %f" ||
-		               echo "%k%F{3} %f"
+		[[ ${t} ]] && echo "%K{5}%F{3} %F{0}  ${t} %k%F{5} %f" ||
+		              echo "%k%F{3} %f"
 	}
 
 	Get_Branch()
 	{
 		typeset -r b=$(git branch --show-current 2>/dev/null)
-		[[ -n $b ]] && echo "%K{3}%F{1} %F{0} 󰘬 $b $(Get_Tag)" ||
-		               echo "%k%F{1} %f"
+		[[ ${b} ]] && echo "%K{3}%F{1} %F{0} 󰘬 ${b} $(Get_Tag)" ||
+		              echo "%k%F{1} %f"
 	}
 
 	echo "%K{0}%F{1} %F{7}%(?..🔥)🐉 %n@%m %K{8}%F{0}"\
@@ -39,3 +39,4 @@ __Chinatown()
 
 PROMPT='$(__Chinatown)
 %F{8} ✗%f '
+
