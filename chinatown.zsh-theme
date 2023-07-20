@@ -1,7 +1,7 @@
 setopt promptsubst
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-__Chinatown()
+__chinatown_t()
 {
 	Get_Virtual_Environment()
 	{
@@ -37,6 +37,6 @@ __Chinatown()
 	     "$(Get_Virtual_Environment)  $(Get_Directory) $(Get_Branch)%k%f"
 }
 
-PROMPT='$(__Chinatown)
+PROMPT='$(__chinatown_t)
 %F{8} ✗%f '
 
