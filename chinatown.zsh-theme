@@ -18,14 +18,12 @@ __Chinatown() {
 
     Get_Tag() {
         typeset -r t=$(git describe --tags --abbrev=0 2>/dev/null)
-        [[ ${t} ]] &&
-            echo "%K{5} %F{0}  ${t} %k%F{5} " || echo "%k "
+        [[ ${t} ]] && echo "%K{5} %F{0}  ${t} %k%F{5} " || echo "%k "
     }
 
     Get_Branch() {
         typeset -r b=$(git branch --show-current 2>/dev/null)
-        [[ ${b} ]] &&
-            echo "%K{3} %F{0} 󰘬 ${b} %F{3}$(Get_Tag)" || echo "%k "
+        [[ ${b} ]] && echo "%K{3} %F{0} 󰘬 ${b} %F{3}$(Get_Tag)" || echo "%k "
     }
 
     echo\
