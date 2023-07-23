@@ -2,7 +2,7 @@
 
 ## About
 
-A theme for the ZSH shell that is decorated with a dragon.
+A theme for the ZSH shell that is decorated by a dragon.
 
 ![](preview.png)
 
@@ -12,7 +12,7 @@ A theme for the ZSH shell that is decorated with a dragon.
 > appeareance also depends on your terminal emulator's theme and font. The
 > theme used is [Flamerial](https://github.com/skippyr/flamerial).
 
-## Design
+### Design
 
 About its design:
 
