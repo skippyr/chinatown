@@ -70,6 +70,8 @@ rm -rf ~/.local/share/zsh/themes/chinatown
 
 -   Remove the source rule that you have written in the `~/.zshrc` file during
     the installation.
+-   Reopen your terminal emulator to reload your ZSH session in order to load
+    the default theme.
 
 ## Support
 
@@ -81,4 +83,3 @@ This software is licensed under the MIT License. A copy of the license is
 bundled with the source code.
 
 Copyright (c) Sherman Rofeman. MIT license.
-
