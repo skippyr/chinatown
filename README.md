@@ -34,7 +34,7 @@ properly:
 | Dependency | Description |
 |-|-|
 | `git` | required to provide support to Git repositories. | 
-| [A Nerd Font's font](https://www.nerdfonts.com/font-downloads) and an [emoji font](https://fonts.google.com/noto/specimen/Noto+Emoji) | provides the required pretty symbols.
+| [A Nerd Font's font](https://www.nerdfonts.com/font-downloads) and an [emoji font](https://fonts.google.com/noto/specimen/Noto+Emoji) | provides the required pretty symbols. |
 
 ### Procedures
 
