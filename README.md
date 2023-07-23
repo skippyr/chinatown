@@ -36,7 +36,7 @@ properly:
 | `git` | required to provide support to Git repositories. | 
 | [A Nerd Font's font](https://www.nerdfonts.com/font-downloads) and an [emoji font](https://fonts.google.com/noto/specimen/Noto+Emoji) | provides the required pretty symbols.
 
-### Installation
+### Procedures
 
 Using a terminal emulator, follow these steps:
 
@@ -58,7 +58,7 @@ source ~/.local/share/zsh/themes/chinatown/chinatown.zsh-theme
 -   Reopen your terminal emulator to reload your ZSH session in order to load
     the theme.
 
-### Uninstallation
+## Uninstallation
 
 Using a terminal emulator, follow these steps:
 
@@ -71,7 +71,7 @@ rm -rf ~/.local/share/zsh/themes/chinatown
 -   Remove the source rule that you have written in the `~/.zshrc` file during
     the installation.
 
-### Support
+## Support
 
 Report issues, questions or suggestions through the [issues tab](https://github.com/skippyr/chinatown/issues).
 
