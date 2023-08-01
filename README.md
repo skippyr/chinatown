@@ -4,6 +4,12 @@ A theme for the ZSH shell that is decorated by a dragon.
 ![](preview.png)
 
 ## Installation
+### Dependencies
+-	git
+-	a Nerd Font's font.
+-	an emojis font.
+
+### Procedures
 -	Clone this repository.
 ```bash
 git\
