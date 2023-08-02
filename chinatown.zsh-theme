@@ -11,23 +11,27 @@ __Chinatown()
 
 	Get_Directory()
 	{
-		typeset -a d=("${(s./.)PWD/${HOME}/~}")
-		[[ ${#d} -gt 1 ]] && for i in {1..$((${#d} - 1))}; do
-			[[ "${d[i]}" == .* ]] && d[i]=${d[i][1,2]} || d[i]=${d[i][1]}
-		done
-		echo ${(j./.)d}
+		typeset -a directory_splits=("${(s./.)PWD/${HOME}/~}")
+		[[ ${#directory_splits} -gt 1 ]] &&
+			for directory_split_index in {1..$((${#directory_splits} - 1))}; do
+				[[ "${directory_splits[directory_split_index]}" == .* ]] &&
+					directory_splits[directory_split_index]=${directory_splits[directory_split_index][1,2]} ||
+					directory_splits[directory_split_index]=${directory_splits[directory_split_index][1]}
+			done
+		echo ${(j./.)directory_splits}
 	}
 
 	Get_Tag()
 	{
-		typeset -r t=$(git describe --tags --abbrev=0 2>/dev/null)
-		[[ ${t} ]] && echo "%K{5} %F{0}  ${t} %k%F{5} " || echo "%k "
+		typeset -r tag=$(git describe --tags --abbrev=0 2>/dev/null)
+		[[ ${tag} ]] && echo "%K{5} %F{0}  ${tag} %k%F{5} " || echo "%k "
 	}
 
 	Get_Branch()
 	{
-		typeset -r b=$(git branch --show-current 2>/dev/null)
-		[[ ${b} ]] && echo "%K{3} %F{0} 󰘬 ${b} %F{3}$(Get_Tag)" || echo "%k "
+		typeset -r branch=$(git branch --show-current 2>/dev/null)
+		[[ ${branch} ]] &&
+			echo "%K{3} %F{0} 󰘬 ${branch} %F{3}$(Get_Tag)" || echo "%k "
 	}
 
 	echo\
