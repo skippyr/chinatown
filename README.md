@@ -1,6 +1,6 @@
 # Chinatown
 ## About
-A theme for the ZSH shell with a dragon.
+A theme for the ZSH shell that is decorated by a dragon.
 ![](preview.png)
 
 It can show you:
@@ -9,6 +9,12 @@ It can show you:
 -   Your current directory path abbreviating parent directories.
 
 ## Installation
+### Dependencies
+-   git
+-   A Nerd Font's font.
+-   An emojis font.
+
+### Procedures
 -   Clone this repository.
 ```bash
 git\
