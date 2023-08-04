@@ -4,6 +4,7 @@ A theme for the ZSH shell that is decorated by a dragon.
 ![](preview.png)
 
 It can show you:
+-   If your last command failed, as the dragon will spit fire.
 -   Your host and user names.
 -   If inside a Git repository, the branch and tag.
 -   Your current directory path abbreviating parent directories.
