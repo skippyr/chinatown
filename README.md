@@ -18,8 +18,8 @@ It can show you:
 -   Clone this repository.
 ```bash
 git\
-    clone --depth=1 https://github.com/skippyr/chinatown\
-    ~/.local/share/zsh/themes/chinatown
+  clone --depth=1 https://github.com/skippyr/chinatown\
+  ~/.local/share/zsh/themes/chinatown
 ```
 
 -   Add the following source rule to your `~/.zshrc` file. Ensure to not source
