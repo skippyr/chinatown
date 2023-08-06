@@ -6,8 +6,7 @@ __Chinatown()
     Get_Virtual_Environment()
     {
         [[ ${VIRTUAL_ENV} ]] && echo "%K{2} %F{0}  ${VIRTUAL_ENV##*/}"\
-                                     "%K{1}%F{2} " ||
-                                echo "%K{1} "
+                                     "%K{1}%F{2} " || echo "%K{1} "
     }
 
     Get_Directory()
