@@ -20,7 +20,7 @@ The following dependencies must be installed to install this software properly:
 -   Clone this repository.
 ```bash
 git\
-    clone --depth=1 https://github.com/skippyr/chinatown
+    clone --depth=1 https://github.com/skippyr/chinatown\
     ~/.local/share/zsh/themes/chinatown
 ```
 
