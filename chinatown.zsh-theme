@@ -5,7 +5,7 @@ __Chinatown()
 {
     Get_Virtual_Environment()
     {
-        [[ ${VIRTUAL_ENV} ]] && echo "%K{2} %F{0}  ${VIRTUAL_ENV##*/}"\
+        [[ ${VIRTUAL_ENV} ]] && echo "%K{2} %F{0}  ${VIRTUAL_ENV##*/}"       \
                                      "%K{1}%F{2} " || echo "%K{1} "
     }
 
@@ -34,9 +34,9 @@ __Chinatown()
                            echo "%k "
     }
 
-    echo\
-        "%K{0}%F{1} %F{7}%(?..🔥)🐉 %n@%m %K{8}%F{0}%F{8}"\
-        "$(Get_Virtual_Environment)%F{0}  $(Get_Directory)"\
+    echo                                                                       \
+        "%K{0}%F{1} %F{7}%(?..🔥)🐉 %n@%m %K{8}%F{0}%F{8}"                   \
+        "$(Get_Virtual_Environment)%F{0}  $(Get_Directory)"                   \
         "%F{1}$(Get_Branch)\n%F{8} ✗%f "
 }
 
