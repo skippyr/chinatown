@@ -30,6 +30,9 @@ must be installed:
 
 -	**`git`**: required to clone this repository and obtain information about
 	your Git repositories to show in the prompt.
+-	**[A Nerd Fonts' font](https://www.nerdfonts.com/font-downloads) and [an
+	emojis font](https://fonts.google.com/noto/specimen/Noto+Emoji)**: required
+	to provide the pretty symbols used in the prompt.
 
 ### Procedures
 
