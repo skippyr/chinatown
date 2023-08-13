@@ -12,11 +12,11 @@ Note: the colors used in this shell theme will depend on your terminal emulator'
 
 In the prompt, you will find:
 
--	If your last command failed, the dragon will spit fire.
--	Your host and user names.
--	If you have sourced a virtual environment, its base name.
--	Your current directory path abbreviated in a Fish shell like way.
--	If inside a Git repository, the branch name and the latest tag.
+- If your last command failed, the dragon will spit fire.
+- Your host and user names.
+- If you have sourced a virtual environment, its base name.
+- Your current directory path abbreviated in a Fish shell like way.
+- If inside a Git repository, the branch name and the latest tag.
 
 ## Installation
 
@@ -24,14 +24,14 @@ In the prompt, you will find:
 
 In order to install and run this software properly, the following dependencies must be installed:
 
--	`git`: required to clone this repository and obtain information about your Git repositories to show in the prompt.
--	[A Nerd Fonts' font](https://www.nerdfonts.com/font-downloads) and [an emojis font](https://fonts.google.com/noto/specimen/Noto+Emoji): required to provide the pretty symbols used in the prompt.
+- `git`: required to clone this repository and obtain information about your Git repositories to show in the prompt.
+- [A Nerd Fonts' font](https://www.nerdfonts.com/font-downloads) and [an emojis font](https://fonts.google.com/noto/specimen/Noto+Emoji): required to provide the pretty symbols used in the prompt.
 
 ### Procedures
 
 Using a command-line utility, follow these steps:
 
--	Clone this repository using `git`.
+- Clone this repository using `git`.
 
 ```bash
 git\
@@ -39,13 +39,13 @@ git\
     ~/.local/share/zsh/themes/chinatown
 ```
 
--	Add the following source rule in your `~/.zshrc` file. Ensure to not source any other theme to avoid causing conflicts.
+- Add the following source rule in your `~/.zshrc` file. Ensure to not source any other theme to avoid causing conflicts.
 
 ```bash
 source ~/.local/share/zsh/themes/chinatown/chinatown.zsh-theme
 ```
 
--	Reopen your shell session. At this point, the theme should be installed and running.
+- Reopen your shell session. At this point, the theme should be installed and running.
 
 ## Support
 
