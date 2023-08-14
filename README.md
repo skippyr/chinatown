@@ -5,7 +5,7 @@ powerline style.
 
 Here is a preview that you can check out:
 
-![](preview.png)
+![](preview.webp)
 
 Note: the colors used in this shell theme depends on your terminal emulator's
       theme. This means that it may look different in your setup compared to the
