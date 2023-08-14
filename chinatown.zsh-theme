@@ -1,9 +1,9 @@
-export VIRTUAL_ENV_DISABLE_PROMPT="1"
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 setopt promptsubst
 
 function __Chinatown() {
-    Get_Virtual_Environment() {
+    function Get_Virtual_Environment() {
         [[ ${VIRTUAL_ENV} ]] && echo "%K{2} %F{0}  ${VIRTUAL_ENV##*/}"       \
                                      "%K{1}%F{2} " || echo "%K{1} "
     }
@@ -24,7 +24,7 @@ function __Chinatown() {
         [[ ${tag} ]] && echo "%K{5} %F{0}  ${tag} %k%F{5} " || echo "%k "
     }
 
-    Get_Branch() {
+    function Get_Branch() {
         typeset -r branch=$(git branch --show-current 2>/dev/null)
         [[ ${branch} ]] && echo "%K{3} %F{0} 󰘬 ${branch} %F{3}$(Get_Tag)" ||
                            echo "%k "
