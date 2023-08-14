@@ -16,7 +16,8 @@ In the prompt, you will find:
 - If your last command failed, as the dragon will spit fire.
 - Your host and user names.
 - If you have sourced a virtual environment, its base name.
-- Your current directory path abbreviated in a Fish shell like way.
+- Your current directory path, abbreviating parent directories by their
+  initials.
 - If inside a Git repository, the branch name and the latest tag.
 
 ## Installation
