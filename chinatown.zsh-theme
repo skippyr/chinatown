@@ -27,4 +27,5 @@ function _chinatown_get_branch() {
 }
 
 PROMPT='%K{0}%F{1} %F{7}%(?..🔥)🐉 %n@%m %F{0}$(_chinatown_get_venv)  \
-$(_chinatown_get_dir_abbr) %F{1}$(_chinatown_get_branch) '
+$(_chinatown_get_dir_abbr) %F{1}$(_chinatown_get_branch)
+%F{8} ✗%f '
