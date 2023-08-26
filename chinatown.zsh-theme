@@ -2,11 +2,11 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 setopt promptsubst
 
-__c_gve() {
+_c_get_venv() {
 	[[ ${VIRTUAL_ENV} ]] && echo "%K{2}   ${VIRTUAL_ENV##*/} %F{2}"
 }
 
-__c_gda() {
+_c_get_abbr_dir() {
 	d=("${(s./.)PWD/${HOME}/~}")
 	[[ ${#d} -gt 1 ]] && for i in {1..$((${#d} - 1))}; do
 		[[ ${d[i]} == .* ]] && d[i]=${d[i][1,2]} || d[i]=${d[i][1]}
@@ -14,16 +14,16 @@ __c_gda() {
 	echo ${(j./.)d}
 }
 
-__c_gtg() {
+_c_get_tag() {
 	t=$(git describe --tags --abbrev=0 2>/dev/null)
 	[[ ${t} ]] && echo "%K{5} %F{0}  ${t} %F{5}"
 }
 
-__c_gbr() {
+_c_get_branch() {
 	b=$(git branch --show-current 2>/dev/null)
-	[[ ${b} ]] && echo "%K{3} %F{0} 󰘬 ${b} %F{3}$(__c_gtg)"
+	[[ ${b} ]] && echo "%K{3} %F{0} 󰘬 ${b} %F{3}$(_c_get_tag)"
 }
 
-PROMPT='%K{0}%F{1} %F{7}%(?..🔥)🐉 %n@%m %F{0}$(__c_gve)%K{1} %F{0}  \
-$(__c_gda) %F{1}$(__c_gbr)%k %F{8}
+PROMPT='%K{0}%F{1} %F{7}%(?..🔥)🐉 %n@%m %F{0}$(_c_get_venv)%K{1} %F{0}  \
+$(_c_get_abbr_dir) %F{1}$(_c_get_branch)%k %F{8}
  ✗%f '
