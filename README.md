@@ -27,7 +27,7 @@ Using a terminal emulator, follow these steps:
 - Clone this repository using `git`.
 
 ```bash
-git clone --depth 1 https://github.com/skippyr/chinatown\
+git clone --depth 1 https://github.com/skippyr/chinatown \
 ~/.local/share/zsh/themes/chinatown
 ```
 
