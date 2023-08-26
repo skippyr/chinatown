@@ -1,6 +1,6 @@
 # Chinatown
 # About
-This repository contains the source code of Chinatown, a ZSH shell with a powerline style that is decorated by flames and a dragon.
+This repository contains the source code of Chinatown, a theme for ZSH shell with a powerline style that is decorated by flames and a dragon.
 
 ![](preview.webp)
 
