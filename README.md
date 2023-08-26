@@ -6,6 +6,13 @@ This repository contains the source code of Chinatown, a theme for ZSH shell wit
 
 Note: this theme uses your terminal emulator's colors, so they may look different in your setup.
 
+In the prompt, you will find:
+
+- If your last command has failed, as the dragon will spit fire.
+- If you have sourced a virtual environment, its base name.
+- Your current directory with parent directories abbreviated by their initials.
+- If inside a Git repository, the active branch and the latest tag.
+
 ## Installation
 ### Dependencies
 The following dependencies must be installed to install and run this theme.
