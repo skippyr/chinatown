@@ -2,12 +2,12 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 setopt promptsubst
 
-_chinatown() {
-  get_venv() {
+function _chinatown {
+  function get_venv {
     [[ ${VIRTUAL_ENV} ]] && echo "%K{2}   ${VIRTUAL_ENV##*/} %F{2}"
   }
 
-  get_cwd() {
+  function get_cwd {
     d=("${(s./.)PWD/${HOME}/~}")
     [[ ${#d} -gt 1 ]] && for i in {1..$((${#d} - 1))}; do
       [[ ${d[i]} == .* ]] && d[i]=${d[i][1,2]} || d[i]=${d[i][1]}
@@ -15,12 +15,12 @@ _chinatown() {
     echo ${(j./.)d}
   }
 
-  get_tag() {
+  function get_tag {
     t=$(git describe --tags --abbrev=0 2>/dev/null)
     [[ ${t} ]] && echo "%K{5} %F{0}  ${t} %F{5}"
   }
 
-  get_branch() {
+  function get_branch {
     b=$(git branch --show-current 2>/dev/null)
     [[ ${b} ]] && echo "%K{3} %F{0} 󰘬 ${b} %F{3}$(get_tag)"
   }
